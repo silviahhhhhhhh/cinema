@@ -1,0 +1,156 @@
+body {
+    background-color: #1a202c;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+nav a {
+    cursor: pointer;
+}
+
+.pelicula {
+    background: #2d3748;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.pelicula:hover {
+    background: #4a5568;
+}
+
+.detalle {
+    background: #2d3748;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.pantalla {
+    text-align: center;
+    color: #f6ad55;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.mapa {
+    align-items: center;
+}
+
+.mapa-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width:3000px;
+    margin: 0;
+}
+
+.fila {
+    display: grid;
+    grid-template-columns: repeat(24, 1fr); /* 12 asientos + 2 pasillos + 12 asientos */
+    gap: 10px;
+    width: 100%;
+    max-width: 100%;
+}
+
+.fila:not(.ultima-fila) {
+    grid-template-columns: repeat(12, 1fr) 48px repeat(13, 1fr);
+}
+
+.ultima-fila {
+    grid-template-columns: repeat(26, 1fr);
+}
+
+.asiento {
+    aspect-ratio: 1;
+    background-color: #4B5563;
+    border: 1px solid #9CA3AF;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    min-width: 30px;
+    min-height: 30px;
+}
+
+.asiento:hover {
+    background-color: #FBBF24;
+}
+
+.pasillo {
+    grid-column: span 2;
+    background-color: transparent;
+}
+
+.hidden {
+    display: none;
+}
+
+.contenedor-pelicula {
+    width: 100px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #2d3748;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.poster {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+.contenedor-pelicula h2 {
+    font-size: 1.25rem; /* Tamaño del título */
+    margin-top: 10px;
+}
+
+.contenedor-pelicula p {
+    font-size: 1rem; /* Tamaño del texto para género y duración */
+    margin-top: 5px;
+}
+
+.A {
+    width: 150px;
+}
+
+.detallepelicula h2 {
+    text-align: center;
+}
+
+.horario-sala {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 5px;
+    background-color: #4a5568;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.horario-sala:hover {
+    background-color: #2d3748;
+}
+
+.horario-texto {
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+
+}
+
+.horarios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    list-style-type: none;
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cine Sin Nombre</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white">
+<nav class="bg-gray-800 p-4">
+    <div class="container mx-auto flex justify-between">
+        <a href="#" class="text-xl font-bold">Cine Sin Nombre</a>
+        <div>
+            <a href="#" class="mr-4 hover:text-yellow-400" onclick="mostrarSeccion('peliculas')">Películas</a>
+            <a href="#" class="hover:text-yellow-400" onclick="mostrarSeccion('entradas')">Entradas</a>
+        </div>
+    </div>
+</nav>
+
+<div class="container mx-auto p-8" id="peliculas" class="peliculas">
+    <h1 class="text-4xl text-center mb-10 font-bold">Películas</h1>
+    <div class="grid grid-cols-1 md:grid-cols-6 gap-5">
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg width-1" class="contenedor-pelicula" onclick="mostrarDetalles('Interstellar', 'Acción', '120 min')">
+            <img src="interstellar.jpg" alt="Interstellar" class="poster"></img>
+            <h2 class="text-2xl font-bold text-center">Interstellar</h2>
+            <p class="text-center">Género: Acción</p>
+            <p class="text-center">Duración: 120 min</p>
+        </div>
+
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg" class="contenedor-pelicula" onclick="mostrarDetalles('Aún Estoy Aquí', 'Drama', '137 min')">
+            <img src="aun estoy aquí.jpg" alt="Aún Estoy Aquí" class="poster"></img>
+            <h2 class="text-2xl font-bold">Aún Estoy Aquí</h2>
+            <p class="text-center">Género: Drama</p>
+            <p class="text-center">Duración: 137 min</p>
+        </div>
+
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg" class="contenedor-pelicula" onclick="mostrarDetalles('Pelicula 3', 'Drama', '110 min')">
+            <h2 class="text-2xl font-bold text-center">Película 3</h2>
+            <p class="text-center">Género: Acción</p>
+            <p class="text-center">Duración: 120 min</p>
+        </div>
+
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg width-1" class="contenedor-pelicula" onclick="mostrarDetalles('Película 4', 'Misterio', '135 min')">
+            <img src="A" alt="Interstellar" class="poster"></img>
+            <h2 class="text-2xl font-bold text-center">Película 4</h2>
+            <p class="text-center">Género: Acción</p>
+            <p class="text-center">Duración: 120 min</p>
+        </div>
+
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg" class="contenedor-pelicula" onclick="mostrarDetalles('Pelicula 5', 'Terror', '150 min')">
+            <h2 class="text-2xl font-bold text-center">Película 5</h2>
+            <p class="text-center">Género: Acción</p>
+            <p class="text-center">Duración: 120 min</p>
+        </div>
+
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg" class="contenedor-pelicula" onclick="mostrarDetalles('Pelicula 6', 'Histórico', '180 min')">
+            <h2 class="text-2xl font-bold text-center">Película 6</h2>
+            <p class="text-center">Género: Acción</p>
+            <p class="text-center">Duración: 120 min</p>
+        </div>
+    </div>
+
+    <div class="mt-10 p-6 bg-gray-700 rounded-lg" id="detallePelicula">
+        <h2 class="text-3xl font-bold text-center" id="tituloPelicula">Selecciona una película</h2>
+        <p class="text-center" id="generoPelicula"></p>
+        <p class="text-center" id="duracionPelicula"></p>
+        <div id="salasHorarios" class="mt-6 hidden">
+            <h3 class="text-2xl font-bold text-center">Salas Disponibles y Horarios</h3>
+            <h3 class="horario-texto">Miércoles</h3>
+            <ul class="horarios">
+                <li >
+                    <a href="#" class="horario-sala" onclick="mostrarMapa('16:00')">Sala 1 - 16:00</a>
+                    <a href="#" class="horario-sala" onclick="mostrarMapa('19:00')">Sala 1 - 19:00</a>
+                    <a href="#" class="horario-sala" onclick="mostrarMapa('21:00')">Sala 1 - 21:00</a>
+                </li>
+            </ul>
+            <h3 class="horario-texto">Jueves</h3>
+            <ul class="horarios">
+                <li>
+                    <a href="#" class="horario-sala" onclick="mostrarMapa('15:00')">Sala 2 - 15:00</a>
+                    <a href="#" class="horario-sala" onclick="mostrarMapa('18:00')">Sala 2 - 18:00</a>
+                    <a href="#" class="horario-sala" onclick="mostrarMapa('20:30')">Sala 2 - 20:30</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="container mx-auto p-8 hidden" id="entradas">
+    <h1 class="text-4xl text-center mb-10 font-bold">Tipos de Entradas</h1>
+    <ul class="bg-gray-800 p-6 rounded-lg shadow-lg">
+        <li class="mb-4">Entrada General - $10</li>
+        <li class="mb-4">Entrada VIP - $20</li>
+        <li class="mb-4">Entrada Infantil - $7</li>
+        <li class="mb-4">Entrada 3D - $15</li>
+    </ul>
+</div>
+
+<div class="container mx-auto p-8 hidden" id="mapaAsientos">
+    <h1 class="text-4xl text-center mb-10 font-bold">Selecciona tus Asientos</h1>
+    <div class="text-center mb-6 text-yellow-400 text-xl font-semibold">Pantalla</div>
+    <div class="mapa"><div class="mapa-container">
+        <div class="fila" id="fila1"></div>
+        <div class="fila" id="fila2"></div>
+        <div class="fila" id="fila3"></div>
+        <div class="fila" id="fila4"></div>
+        <div class="fila" id="fila5"></div>
+        <div class="fila" id="fila6"></div>
+        <div class="fila" id="fila7"></div>
+        <div class="fila" id="fila8"></div>
+        <div class="fila" id="fila9"></div>
+        <div class="fila ultima-fila" id="fila10"></div>
+    </div>
+</div>
+</div>
+
+<script src="./script.js"></script>
+</body>
+</html>
+
