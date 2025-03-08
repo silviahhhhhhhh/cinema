@@ -1,15 +1,48 @@
 body {
-    background-color: #1a202c;
+    background-color: #c6d6d6;
     color: white;
-    font-family: Arial, sans-serif;
+    font-family:lexend;
+    font-weight: 200;
+    width:100%;
+    align-items: center;
 }
 
-nav a {
+nav {
     cursor: pointer;
+    background-color: #77181e;
+    color:#c6d6d6;
+}
+
+.barra {
+    align-items: center;
+    margin: auto;
+    display: flex;
+}
+
+.nombre {
+    margin-left: 40px;
+    margin-right:20px;
+    font-weight: 500;
+    font-size: 35px;
+}
+
+.barra a {
+    margin-left:20px;
+    transform:translateX(150px);
+}
+
+.peliculas {
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+.entradas {
+    margin-right: 50px;
+    margin-left: 50px;
 }
 
 .pelicula {
-    background: #2d3748;
+    background: #a92727;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
@@ -18,7 +51,41 @@ nav a {
 }
 
 .pelicula:hover {
-    background: #4a5568;
+    background: #a92727;
+}
+
+.poster {
+    width: auto;
+    height: 150px;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.título {
+    font-size:20px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.género {
+    text-align: center;
+}
+
+.duración {
+    text-align: center;
+}
+
+.experiencia {
+    background-color: #c6d6d6;
+    font-size: 10px;
+    font-weight: 400;
+    width: 150px;
+    color: #282832;
+    align-items: center;
+    margin: auto;
+    margin-top: 5px;
+    text-align: center;
+    border-radius: 5px;
 }
 
 .detalle {
@@ -26,6 +93,11 @@ nav a {
     padding: 20px;
     border-radius: 10px;
     margin-top: 20px;
+    text-align: center;
+}
+
+.pantallas {
+    text-align: center;
 }
 
 .pantalla {
@@ -37,12 +109,14 @@ nav a {
 
 .mapa {
     align-items: center;
+    margin: auto;
 }
 
 .mapa-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-wrap: center;
     gap: 10px;
     width: 100%;
     max-width:3000px;
@@ -51,7 +125,7 @@ nav a {
 
 .fila {
     display: grid;
-    grid-template-columns: repeat(24, 1fr); /* 12 asientos + 2 pasillos + 12 asientos */
+    grid-template-columns: repeat(24, 1fr);
     gap: 10px;
     width: 100%;
     max-width: 100%;
@@ -59,10 +133,6 @@ nav a {
 
 .fila:not(.ultima-fila) {
     grid-template-columns: repeat(12, 1fr) 48px repeat(13, 1fr);
-}
-
-.ultima-fila {
-    grid-template-columns: repeat(26, 1fr);
 }
 
 .asiento {
@@ -107,24 +177,6 @@ nav a {
     margin-bottom: 15px;
 }
 
-.contenedor-pelicula h2 {
-    font-size: 1.25rem; /* Tamaño del título */
-    margin-top: 10px;
-}
-
-.contenedor-pelicula p {
-    font-size: 1rem; /* Tamaño del texto para género y duración */
-    margin-top: 5px;
-}
-
-.A {
-    width: 150px;
-}
-
-.detallepelicula h2 {
-    text-align: center;
-}
-
 .horario-sala {
     display: inline-block;
     padding: 10px 15px;
@@ -153,4 +205,10 @@ nav a {
     justify-content: center;
     padding: 0;
     list-style-type: none;
+}
+
+.entradas {
+    margin-right: 50px;
+    margin-left: 50px;;
+    display: none;
 }
