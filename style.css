@@ -125,14 +125,14 @@ nav {
 
 .fila {
     display: grid;
-    grid-template-columns: repeat(24, 1fr);
+    grid-template-columns: repeat(26, 1fr);
     gap: 10px;
     width: 100%;
     max-width: 100%;
 }
 
 .fila:not(.ultima-fila) {
-    grid-template-columns: repeat(12, 1fr) 48px repeat(13, 1fr);
+    grid-template-columns: repeat(12, 1fr) 48px repeat(14, 1fr);
 }
 
 .asiento {
@@ -147,7 +147,7 @@ nav {
 }
 
 .asiento:hover {
-    background-color: #FBBF24;
+    background-color: #a92727;
 }
 
 .pasillo {
@@ -208,6 +208,28 @@ nav {
 }
 
 .entradas {
+    margin-right: 50px;
+    margin-left: 50px;;
+    display: none;
+}
+
+.table {
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: #a92727;
+    border-radius: 10px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    font-size: 12px;
+    border: 1px solid #a92727;
+    background: #c6d6d6;
+    color: #282832;
+}
+
+.menus {
     margin-right: 50px;
     margin-left: 50px;;
     display: none;

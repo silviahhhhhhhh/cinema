@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     filas.forEach((fila, index) => {
         const esUltimaFila = index === 9;
-        const numAsientos = 24;
+        const numAsientos = 26;
 
         for (let i = 1; i <= numAsientos; i++) {
             const asiento = document.createElement('div');
@@ -44,6 +44,10 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             fila.appendChild(asiento);
+
+            asiento.addEventListener("click", () => {
+                asiento.classList.toggle("selected");
+            });
         }
     });
-});
+})

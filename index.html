@@ -18,6 +18,7 @@
         <div>
             <a href="#" class="mr-4 hover:text-yellow-400" onclick="mostrarSeccion('peliculas')">Películas</a>
             <a href="#" class="hover:text-yellow-400" onclick="mostrarSeccion('entradas')">Entradas</a>
+            <a href="#" class="hover:text-yellow-400" onclick="mostrarSeccion('menú')">Menú</a>
         </div>
     </div>
 </nav>
@@ -33,15 +34,15 @@
             <p class="experiencia">Experiencia "Interstellar"</p>
         </div>
 
-        <div style="background-color: #77181e;" class="p-6 rounded-lg shadow-lg" class="contenedor-pelicula" onclick="mostrarDetalles('Aún Estoy Aquí', 'Drama', '137 min', 'Interstellar')">
-            <img src="aun estoy aquí.jpg" alt="Aún Estoy Aquí" class="poster"></img>
-            <h2 class="título">Aún Estoy Aquí</h2>
+        <div style="background-color: #77181e;" class="p-6 rounded-lg shadow-lg" class="contenedor-pelicula" onclick="mostrarDetalles('Jaws', 'Terror', '124 min', 'Jaws')">
+            <img src="jaws.jpg" alt="Jaws" class="poster"></img>
+            <h2 class="título">Jaws</h2>
             <p class="género">Género: Drama</p>
             <p class="duración">Duración: 137 min</p>
-            <p class="experiencia">Experiencia "Normal"</p>
+            <p class="experiencia">Experiencia "Jaws"</p>
         </div>
 
-        <div style="background-color: #77181e;" class="p-6 rounded-lg shadow-lg" class="contenedor-pelicula" onclick="mostrarDetalles('Pelicula 3', 'Drama', '110 min')">
+        <div style="background-color: #77181e;" class="p-6 rounded-lg shadow-lg" class="contenedor-pelicula" onclick="mostrarDetalles('Avatar', 'Ciencia Ficción', '161 min')">
             <img src="avatar.jpg" alt="Avatar" class="poster"></img>
             <h2 class="título">Avatar</h2>
             <p class="género">Género: Acción</p>
@@ -49,28 +50,33 @@
             <p class="experiencia">Experiencia 3D "Avatar"</p>
         </div>
 
-        <div style="background-color: #77181e;" class="p-6 rounded-lg shadow-lg width-1" class="contenedor-pelicula" onclick="mostrarDetalles('Película 4', 'Misterio', '135 min')">
-            <img src="A" alt="Interstellar" class="poster"></img>
-            <h2 class="título">Interstellar</h2>
-            <p class="género">Género: Acción</p>
-            <p class="duración">Duración: 120 min</p>
+        <div style="background-color: #77181e;" class="p-6 rounded-lg shadow-lg width-1" class="contenedor-pelicula" onclick="mostrarDetalles('Sinners', 'Terror', '137 min')">
+            <img src="sinners.jpg" alt="Sinners" class="poster"></img>
+            <h2 class="título">Sinners</h2>
+            <p class="género">Género: Terror</p>
+            <p class="duración">Duración: 137 min</p>
+            <p class="experiencia">Experiencia "Normal"</p>
         </div>
 
-        <div style="background-color: #77181e;" class="p-6 rounded-lg shadow-lg" class="contenedor-pelicula" onclick="mostrarDetalles('Pelicula 5', 'Terror', '150 min')">
-            <h2 class="título">Interstellar</h2>
-            <p class="género">Género: Acción</p>
-            <p class="duración">Duración: 120 min</p>
+        <div style="background-color: #77181e;" class="p-6 rounded-lg shadow-lg" class="contenedor-pelicula" onclick="mostrarDetalles('Minecraft', 'Fantasía', '100 min')">
+            <img src="minecraft.jpg" alt="Sinners" class="poster"></img>
+            <h2 class="título">Minecraft</h2>
+            <p class="género">Género: Fantasía</p>
+            <p class="duración">Duración: 100 min</p>
+            <p class="experiencia">Experiencia "Normal"</p>
         </div>
 
-        <div style="background-color: #77181e;" class="p-6 rounded-lg shadow-lg" class="contenedor-pelicula" onclick="mostrarDetalles('Pelicula 6', 'Histórico', '180 min')">
-            <h2 class="título">Interstellar</h2>
-            <p class="género">Género: Acción</p>
-            <p class="duración">Duración: 120 min</p>
+        <div style="background-color: #77181e;" class="p-6 rounded-lg shadow-lg" class="contenedor-pelicula" onclick="mostrarDetalles('Little Women', 'Drama', '135 min')">
+            <img src="mujercitas.jpg" alt="Little Women" class="poster"></img>
+            <h2 class="título">Little Women</h2>
+            <p class="género">Género: Drama</p>
+            <p class="duración">Duración: 135 min</p>
+            <p class="experiencia">Re-estreno</p>
         </div>
     </div>
-
-    <div class="mt-5 p-6 bg-gray-700 rounded-lg" id="detallePelicula">
-        <h2 class="text-3xl font-bold text-center" id="tituloPelicula">Selecciona una película</h2>
+    <div style="padding-bottom: 50px">
+    <div class="mt-5 p-6 rounded-lg" style="background-color: #77181e; padding-bottom: 10px;" id="detallePelicula">
+        <h2 class="text-3xl font-bold text-center" style="color: #c6d6d6" id="tituloPelicula">Selecciona una película</h2>
         <p class="text-center" id="generoPelicula"></p>
         <p class="text-center" id="duracionPelicula"></p>
         <div id="salasHorarios" class="mt-6 hidden">
@@ -78,37 +84,76 @@
             <h3 class="horario-texto">Miércoles</h3>
             <ul class="horarios">
                 <li >
-                    <a href="#" class="horario-sala" onclick="mostrarMapa('16:00')">Sala 1 - 16:00</a>
-                    <a href="#" class="horario-sala" onclick="mostrarMapa('19:00')">Sala 1 - 19:00</a>
-                    <a href="#" class="horario-sala" onclick="mostrarMapa('21:00')">Sala 1 - 21:00</a>
+                    <a href="#" class="horario-sala" style="background-color:#c6d6d6; color: #77181e; font-weight: 400;" onclick="mostrarMapa('16:00')">Sala 1 - 16:00</a>
+                    <a href="#" class="horario-sala" style="background-color:#c6d6d6; color: #77181e; font-weight: 400;" onclick="mostrarMapa('19:00')">Sala 1 - 19:00</a>
+                    <a href="#" class="horario-sala" style="background-color:#c6d6d6; color: #77181e; font-weight: 400;" onclick="mostrarMapa('21:00')">Sala 1 - 21:00</a>
                 </li>
             </ul>
             <h3 class="horario-texto">Jueves</h3>
             <ul class="horarios">
                 <li>
-                    <a href="#" class="horario-sala" onclick="mostrarMapa2('15:00')">Sala 2 - 15:00</a>
-                    <a href="#" class="horario-sala" onclick="mostrarMapa2('18:00')">Sala 2 - 18:00</a>
-                    <a href="#" class="horario-sala" onclick="mostrarMapa2('20:30')">Sala 2 - 20:30</a>
+                    <a href="#" class="horario-sala" style="background-color:#c6d6d6; color: #77181e; font-weight: 400;" onclick="mostrarMapa('15:00')">Sala 2 - 15:00</a>
+                    <a href="#" class="horario-sala" style="background-color:#c6d6d6; color: #77181e; font-weight: 400;" onclick="mostrarMapa('18:00')">Sala 2 - 18:00</a>
+                    <a href="#" class="horario-sala" style="background-color:#c6d6d6; color: #77181e; font-weight: 400;" onclick="mostrarMapa('20:30')">Sala 2 - 20:30</a>
                 </li>
             </ul>
         </div>
+    </div>
     </div>
 </div>
 
 <div class="entradas" id="entradas">
     <h1 class="text-4xl text-center mb-5 mt-5" style="font-weight:500; color:#282832">Entradas</h1>
-    <ul class="bg-gray-800 p-6 rounded-lg shadow-lg">
-        <li class="mb-4">Entrada General - $10</li>
-        <li class="mb-4">Entrada VIP - $20</li>
-        <li class="mb-4">Entrada Infantil - $7</li>
-        <li class="mb-4">Entrada 3D - $15</li>
+    <ul class="p-6 rounded-lg shadow-lg" style="background-color: #77181e;">
+        <table class="tabla" style="width:98.5%;">
+            <thead>
+                <tr>
+                    <th>Entradas</th>
+                    <th>Aperitivo</th>
+                    <th>Interacción</th>
+                    <th>Coste</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Normal</td>
+                    <td>No incluido</td>
+                    <td>Básico (Máquina de humo [Si la película lo requiere])</td>
+                    <td>6.5€ / entrada</td>
+                </tr>
+                <tr>
+                    <td>Experiencia 3D</td>
+                    <td>No incluido</td>
+                    <td>Gafas 3D</td>
+                    <td>8€ / entrada (Extra: + 1€ por recibir gafas 3D)</td>
+                </tr>
+                <tr>
+                    <td>Experiencia 3D "Avatar"</td>
+                    <td>Incluido (Palomitas / Refresco a elección [De carta])</td>
+                    <td>Gafas 3D / Máquina de humo</td>
+                    <td>10.5€ / entrada (Extra: + 1€ por recibir gafas 3D)</td>
+                </tr>
+                <tr>
+                    <td>Experiencia "Jaws"</td>
+                    <td>Incluido (Palomitas / Refresco a elección [De carta])</td>
+                    <td>Piscina (Ambientada en la película)</td>
+                    <td>12.5€ / entrada (Incluido flotador [Acceso no permitido sin ropa de piscina])</td>
+                </tr>
+                <tr>
+                    <td>Experiencia "Interstellar"</td>
+                    <td>Incluido (Aperitivo a elección / Refresco a elección [De carta])</td>
+                    <td>Pack completo (Máquina de humo, asientos móviles, etc. )</td>
+                    <td>14€ / entrada</td>
+                </tr>
+            </tbody>
+        </table>
     </ul>
 </div>
 
 <div class="container mx-auto p-8 hidden" id="mapaAsientos">
     <div class="pantallas">
-        <h1 class="text-4xl text-center mb-10 font-bold">Selecciona tus Asientos</h1>
-        <div class="text-center mb-6 text-yellow-400 text-xl font-semibold">Pantalla</div>
+        <h1 class="text-4xl text-center mb-10 font-bold" style="color:#282832">Selecciona tus Asientos</h1>
+        <div class="text-center mb-6 text-yellow-400 text-xl font-semibold" style="color:#282832">Pantalla</div>
         <div class="mapa"><div class="mapa-container">
             <div class="fila" id="fila1"></div>
             <div class="fila" id="fila2"></div>
